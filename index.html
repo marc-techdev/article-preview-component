@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./dist/output.css">
+
+    <title>Frontend Mentor | Article preview component</title>
+
+
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-6">
+    <main class="w-full max-w-81.75 desktop:max-w-182.5">
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden desktop:flex">
+
+            <div class="desktop:w-2/5">
+                <img src="./images/drawers.jpg" alt="A green chest of drawers" class="w-full h-full object-cover">
+            </div>
+
+            <div class="p-8 desktop:w-3/5">
+                <h2 class="font-bold text-base desktop:text-xl mb-3">
+                    Shift the overall look and feel by adding these wonderful touches to furniture in your home
+                </h2>
+
+                <p class="text-desaturated-dark-blue mb-8">
+                    Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+                </p>
+
+                <footer class="relative flex items-center justify-between">
+                    <div id="author-bar" class="flex items-center justify-between w-full">
+                        <div class="flex items-center gap-4">
+                            <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-bold text-very-dark-grayish-blue">Michelle Appleton</p>
+                                <p class="text-grayish-blue">28 Jun 2020</p>
+                            </div>
+                        </div>
+
+                        <button type="button" class="bg-light-grayish-blue p-2 rounded-full cursor-pointer hover:bg-grayish-blue transition-colors">
+                            <img src="./images/icon-share.svg" alt="Open share menu">
+                        </button>
+                    </div>
+
+                    <div id="share-bar" class="hidden absolute -inset-x-8 -bottom-8 px-8 py-5 bg-very-dark-grayish-blue  items-center justify-between desktop:static desktop:p-0 desktop:bg-transparent">
+                        <div class="flex items-center gap-5">
+                            <h2 class="text-grayish-blue tracking-[5px] text-body font-medium">SHARE</h2>
+                            <div class="flex gap-4">
+                                <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+                                <a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
+                                <a href="#"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
+                            </div>
+                        </div>
+
+                        <button type="button" class="bg-desaturated-dark-blue p-2 rounded-full cursor-pointer">
+                          <img src="./images/icon-share.svg" alt="Close share menu" class="brightness-200">
+                        </button>
+                    </div>
+                </footer>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

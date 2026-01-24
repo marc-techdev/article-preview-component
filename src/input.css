@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* 1. Import the Font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+@theme {
+    /* 2. Custom Colors */
+    --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+    --color-grayish-blue: hsl(212, 23%, 69%);
+    --color-light-grayish-blue: hsl(210, 46%, 95%);
+    /* 3. Custom Breakpoints */
+    --breakpoint-mobile: 375px;
+    --breakpoint-desktop: 1440px;
+    /* 4. Custom Typography */
+    --font-manrope: "Manrope", sans-serif;
+    /* Setting the default body size */
+    --text-body: 13px;
+}
+
+
+/* 5. Applying base styles (Optional but helpful) */
+
+@layer base {
+    body {
+        font-family: var(--font-manrope);
+        font-size: var(--text-body);
+        background-color: var(--color-light-grayish-blue);
+        color: var(--color-very-dark-grayish-blue);
+    }
+}
