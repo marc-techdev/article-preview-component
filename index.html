@@ -9,60 +9,67 @@
     <link rel="stylesheet" href="./dist/output.css">
 
     <title>Frontend Mentor | Article preview component</title>
-
-
 </head>
 
-<body class="min-h-screen flex items-center justify-center p-6">
-    <main class="w-full max-w-81.75 desktop:max-w-182.5">
-        <article class="bg-white rounded-xl shadow-lg overflow-hidden desktop:flex">
+<body class="min-h-screen bg-light-grayish-blue flex items-center justify-center px-6 py-12">
+    <main class="w-full max-w-[24rem] md:max-w-[55rem]">
+        <article class="relative bg-white rounded-[18px] shadow-[0_40px_60px_-35px_rgba(36,50,82,0.35)] overflow-hidden md:overflow-visible md:flex md:h-[282px]">
 
-            <div class="desktop:w-2/5">
-                <img src="./images/drawers.jpg" alt="A green chest of drawers" class="w-full h-full object-cover">
+            <div class="md:w-[40%]">
+                <img src="./images/drawers.jpg" alt="A green chest of drawers" class="w-full h-[200px] md:h-full object-cover object-left-top rounded-t-[18px] md:rounded-none md:rounded-l-[18px]">
             </div>
 
-            <div class="p-8 desktop:w-3/5">
-                <h2 class="font-bold text-base desktop:text-xl mb-3">
+            <div class="p-8 md:p-10 md:w-[60%] flex flex-col gap-6">
+                <h1 class="font-bold text-[17px] leading-[1.4] md:text-[20px] md:leading-[1.5]">
                     Shift the overall look and feel by adding these wonderful touches to furniture in your home
-                </h2>
+                </h1>
 
-                <p class="text-desaturated-dark-blue mb-8">
-                    Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+                <p class="text-desaturated-dark-blue leading-[1.6]">
+                    Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
                 </p>
 
-                <footer class="relative flex items-center justify-between">
-                    <div id="author-bar" class="flex items-center justify-between w-full">
+                <footer class="relative mt-auto">
+                    <div id="author-bar" class="flex items-center justify-between gap-4">
                         <div class="flex items-center gap-4">
                             <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" class="w-10 h-10 rounded-full">
                             <div>
-                                <p class="font-bold text-very-dark-grayish-blue">Michelle Appleton</p>
-                                <p class="text-grayish-blue">28 Jun 2020</p>
+                                <p class="font-bold text-very-dark-grayish-blue text-[13px] leading-tight">Michelle Appleton</p>
+                                <p class="text-grayish-blue text-[13px] leading-tight">28 Jun 2020</p>
                             </div>
                         </div>
 
-                        <button type="button" class="bg-light-grayish-blue p-2 rounded-full cursor-pointer hover:bg-grayish-blue transition-colors">
-                            <img src="./images/icon-share.svg" alt="Open share menu">
+                        <button id="shareBtn" type="button" aria-expanded="false"
+                            class="share-toggle bg-light-grayish-blue p-2 rounded-full cursor-pointer hover:bg-grayish-blue transition-colors z-20">
+                            <img src="./images/icon-share.svg" alt="Open share menu" class="transition-[filter] duration-200">
                         </button>
                     </div>
 
-                    <div id="share-bar" class="hidden absolute -inset-x-8 -bottom-8 px-8 py-5 bg-very-dark-grayish-blue  items-center justify-between desktop:static desktop:p-0 desktop:bg-transparent">
-                        <div class="flex items-center gap-5">
-                            <h2 class="text-grayish-blue tracking-[5px] text-body font-medium">SHARE</h2>
-                            <div class="flex gap-4">
-                                <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
-                                <a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
-                                <a href="#"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
-                            </div>
+                    <div id="share-bar"
+                        class="share-panel flex hidden absolute left-[-2rem] right-[-2rem] bottom-[-2rem] items-center bg-very-dark-grayish-blue px-10 py-4 gap-4 justify-between rounded-b-[18px] z-10
+                               md:bottom-auto md:left-auto md:right-[-6.75rem] md:top-[-3.25rem] md:w-[15.5rem] md:rounded-lg md:px-7 md:py-3 md:shadow-[0_24px_48px_-22px_rgba(36,50,82,0.45)]">
+
+                        <span class="text-grayish-blue tracking-[0.35rem] text-[12px]">SHARE</span>
+
+                        <div class="flex items-center gap-4">
+                            <a href="#" aria-label="Share on Facebook" class="hover:scale-110 transition-transform"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+                            <a href="#" aria-label="Share on Twitter" class="hover:scale-110 transition-transform"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
+                            <a href="#" aria-label="Share on Pinterest" class="hover:scale-110 transition-transform"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
                         </div>
 
-                        <button type="button" class="bg-desaturated-dark-blue p-2 rounded-full cursor-pointer">
-                          <img src="./images/icon-share.svg" alt="Close share menu" class="brightness-200">
+                        <button id="closeBtn" type="button"
+                            class="bg-desaturated-dark-blue p-2 rounded-full cursor-pointer md:hidden">
+                            <img src="./images/icon-share.svg" alt="Close share menu" class="brightness-200">
                         </button>
+
+                        <div
+                            class="hidden md:block absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-very-dark-grayish-blue rotate-45"></div>
                     </div>
                 </footer>
             </div>
         </article>
     </main>
+
+    <script src="./main.js" defer></script>
 </body>
 
 </html>

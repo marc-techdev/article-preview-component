@@ -1,8 +1,7 @@
-@import "tailwindcss";
-
 /* 1. Import the Font from Google Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+@import "tailwindcss";
 @theme {
     /* 2. Custom Colors */
     --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
