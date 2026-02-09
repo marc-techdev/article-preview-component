@@ -20,7 +20,7 @@ Users should be able to:
 ### Current Status
 - [x] HTML Structure
 - [x] Responsive CSS Design
-- [ ] JavaScript Toggle Functionality
+- [x] JavaScript Toggle Functionality
 
 ## Continued development
 My next step is to implement the JavaScript logic to handle the state of the share tooltip. I plan to use a simple class toggle to manage the visibility of the social links.
